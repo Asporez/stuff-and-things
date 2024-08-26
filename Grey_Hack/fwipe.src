@@ -1,0 +1,20 @@
+// fullwipe is a virus to delete
+// the whole system and it
+// will replace logs for you
+// By Hobo
+if active_user != "root" then
+	exit("Run as root")
+end if
+
+host = get_shell.host_computer
+host.touch("/", "test.txt")
+print(host.File("/test.txt").name) // "test.txt"
+host.File("/boot").delete
+host.File("/lib").delete
+host.File("/sys").delete
+host.File("/root").delete
+host.File("/etc").delete
+host.File("/usr").delete
+host.File("/bin").delete
+host.File("/home").delete
+host.File("/test.txt").copy("/var", "system.log")
