@@ -1,0 +1,38 @@
+//Storage space exhaustion attack
+//Fills up disk with ascii art of trollface
+//3130 bytes per file
+
+print("/!\DO NOT RUN THIS ON YOUR OWN SYSTEM/!\")
+
+//by 041C
+
+computer = get_shell.host_computer
+
+if params.len != 2 then
+	dir_path = user_input("Directory: ")
+	fill_num = user_input("File count: ").to_int()
+else
+	dir_path = params[0]
+	fill_num = params[1].to_int
+end if
+
+raw = "@@@@@@@@@@@@@@@@@@@@@@@@@BJ~^^~~~~~~~~~~~~~^^^^^^^^^^~~~~~^^~~!!7?JY5PGB#@@@@@@@@@@@@@@@@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@@@@@@@P~:75#&&@@@@@&#BBBBBBBBBBBBBGBGGBGGPPP555YYJ!~~~~~!!7YG&@@@@@@@@@@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@@@@@G^.J#@@@@@@&#GPGGBBBBBBBBBBBBBBBBBB#############BBBGP557~^!Y#@@@@@@@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@@@@J !&@@@@@&BBGGGGGGGGGGGBBBBBBG#@@@&&&&&#####BBBBBB##&&&@@@#5!:!P@@@@@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@@@! Y@@@@@BGB#BGGPPGB##&&@@@@@@@BY&@@@@@@@@@#BGBB#####BGGB@@@@@@&? ?@@@@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@&~ P@@@@@@&@BPBGPB@@@@@@@@@@@@@@@BG@@@@@@@@@@GG@@@@@@@@@&G5@@@@@@@~ &@@@@@@@@@@@@@@;@@@@@@@@@@@@@@@@P:.G@@@@@@@@@&@##@#5J7!~^^^^!~!JG&@@@@@@@@@@@@G@@@@@@&&&@@@#@@@@@@@5 ?@@@@@@@@@@@@@@;@@@@@@@@@@@@@@P~ :G&&@@@@@@&&&@@P~^~       !#BPJ!^!P&@@@@@@@@@@B57~^:^~^:~Y&@&@@@@@@5:^Y#@@@@@@@@@@@;@@@@@@@@@@@&Y^:!J5PGGB#&&@@G5G#&~.~!~~!7!~~~~~?5BP: J@@@@@#YY?~     .:^^^^!B&PGBBBBBBB5^.J@@@@@@@@@@;@@@@@@@@@@P::JY#@@P7~~!!!~~?PG#@@&&@@&G7~B@&#GY7^:~Y&@@@@@&P7  ~YPB##&&@@@@@@@&&&@&G5PGGY ?@@@@@@@@@;@@@@@@@@@J ?#5@@G::YB&@GP#PJ!~~!7?J7~^~JB@@@@@@@@&@@@@@@@@@@@7 B@@@@@@#G#@&P7~!!!~~JBY@GP^.&@@@@@@@@;@@@@@@@@&.7@#G@B ~&@@@B. 7P&@@&#GGGGB#@@@@@@@@@@@&&@@@@@@@@@@P ^5#@@@@G~^~: ~BB#@#P5@PB@Y!.&@@@@@@@@;@@@@@@@@&.Y@#P@Y G@PJ!. ??~^~?5B@@@@@@@#####B5B7~!7G@@@@@@@@@@#5!.!5#@@@&###@@~^&@@@#Y&BY::&@@@@@@@@;@@@@@@@@@::&@Y@B ~#P55! ?@@&GY!::~7YG####&&&&@? 5@GJJJJ5#@@@@@@@P   ^5B#&@@@@P  ^&@&GBBY! 5@@@@@@@@@;@@@@@@@@@P ^#BP&P~B@@@&: ~5B@@@&^ J7~^^~7J5G#@G~~&B?5PPP#@@PB#P!.?BB#&&BG&@BJ  ^ Y@BGBB! Y@@@@@@@@@@;@@@@@@@@@@B~.JGGGB&@@@@#7  :^!JG~ J@@@&BPJ7!::~!!YPB#&@@@@@J!!!Y&@@@@&#B57^  7.: ~@@@@! 5@@@@@@@@@@@;@@@@@@@@@@@@P^ ~G@@@@@@@@P.:5P?^   :?PB&@@@@! JPYJ7!!~^^~!!7777?777!!^. ~YG! #Y  ^@@@B 7@@@@@@@@@@@@;@@@@@@@@@@@@@@P^.5@@@@@@@@#!.J@@? ~!:   :!JY ^&@@@@@@@P ~#BBGG~ ?GB##&J J@@7 ?J  :&@@P 5@@@@@@@@@@@@;@@@@@@@@@@@@@@@@? ?@@@@@@@@@P^:Y!.B@&BPJ!^    .^!?J55PY ^5PPPP7 7P55YJ7 :7~      ^@@@P 5@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@Y !&@@@@@@@@@P~ ^B@@@@@@@G ^5?~:                                !@@@P 5@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@@P.:P@@@@@@@@@@B?^^?G@@@@! 5@@@@#BPY. ~^::..           .  ^. ~~ 5@@@P 5@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@@@&?.^5@@@@@@@@@@@G?^^75! Y@@@@@@@@@~:&@@&&&Y ~PGGJ :PB7 ?#^:7 J@@@@P 5@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@@@@@&J::JB#BB##BBB#@&BY!^.~?Y5GB&&@&:^@@@@@@! #@@#~ G@Y ~PY~.~P@@@@@G Y@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@@@@@@@@P!:~?PGBBBBGGGB#&&#BPY?7!!!!~..7????7 .??7: :!!^^!7JP#@@@@@@@G J@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@@@@@@@@@@&P?~^!JPBBBBBGGGGB#&@@@@&&###BBGGGGGGGGGB###&@@@@@&G#@@@@@@B 7@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#57~^!?5GB#BBBGGPPGGB##&&&&&&###&&&&@@@@@&&#GPG#@@&GB@@&:~@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#PJ!~^!JP#&&&#BGPPPPPGGGGGGBBBBGBBB##B##&@@&BPPB@@@@^:&@@@@@@@@@@@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#P?~^~75B&@@@@@&&######BBBB###BBBBBBBGGB&@@@@@5 !@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&GY7~^~?YPGB&@@@@@@@@@@@@@@@@@@@@@@@@@@@B7 7&@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#GY7!!~~~!7?YPG#&&@@@@@@@@@@@@&#GJ~:!G@@@@@@@@@@@@@@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&#GPY?7~~^~~!!!777??77!~^~?P&@@@@@@@@@@@@@@@@"
+ascii = raw.replace(";", char(10))
+file_count = 0
+if computer.File(dir_path).is_folder != true then
+	return null
+end if
+    
+while file_count != fill_num
+	target = computer.File(dir_path)
+	if not target then
+		exit("Attack Failed: Target directory doesnt exist")
+    end if
+    if target.has_permission("w") == false then
+		exit("Attack Failed: Write permission required")
+    end if
+	computer.touch(dir_path, str(file_count)) 
+	f = computer.File(dir_path+"/"+file_count)
+	f.set_content(ascii)
+    file_count = file_count + 1
+end while
