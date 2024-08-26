@@ -12,3 +12,5 @@ Python:
 https://numpy.org/doc/stable/user/absolute_beginners.html
 
 https://peps.python.org/pep-0008/
+
+https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm
