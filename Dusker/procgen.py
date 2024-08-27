@@ -6,6 +6,7 @@ from typing import Iterator, List, Tuple, TYPE_CHECKING
 
 import tcod
 
+import entity_factories
 from game_map import GameMap
 import tile_types
 
@@ -40,6 +41,21 @@ class RectangularRoom:
             and self.y2 >= other.y1
         )
     
+def place_entities(
+        room: RectangularRoom, derelict: GameMap, maximum_nanobot: int,
+)-> None:
+    number_of_nanobot = random.randint(0, maximum_nanobot)
+
+    for i in range(number_of_nanobot):
+        x = random.randint(room.x1 + 1, room.x2 - 1)
+        y = random.randint(room.y1 + 1, room.y2 - 1)
+            
+        if not any(entity.x == x and entity.y == y for entity in derelict.entities):
+                if random.random() < 0.8:
+                    entity_factories.dybot.spawn(derelict, x, y)
+                else:
+                    entity_factories.modbot.spawn(derelict, x, y)
+    
 def tunnel_between(
         start: Tuple[int, int], end: Tuple[int,int]
 ) -> Iterator[Tuple[int, int]]:
@@ -65,10 +81,11 @@ def generate_derelict(
         room_max_size: int,
         map_width: int,
         map_height: int,
+        max_nanobot_per_room: int,
         player: Entity,
 ) -> GameMap:
     """Generate new derelict map"""
-    derelict = GameMap(map_width, map_height)
+    derelict = GameMap(map_width, map_height, entities=[player])
 
     rooms: List[RectangularRoom] = []
 
@@ -97,6 +114,9 @@ def generate_derelict(
             # Dig out a tunnel between this room and the previous.
             for x, y in tunnel_between(rooms[-1].center, new_room.center):
                 derelict.tiles[x, y] = tile_types.floor
+
+        place_entities(new_room, derelict, max_nanobot_per_room)
+
 
         # Finally, append the new room to the list.
         rooms.append(new_room)
