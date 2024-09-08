@@ -1,6 +1,14 @@
 # stuff-and-things
 notes, codes, links, references of my discombobulated software development learning process.
 
+-CONTENT-
+
+Dusker: Roguelike prototype using Python3 and tcod.
+
+Grey_Hack: Useful GreyScript source codes.
+
+References: Self-explanatory.
+
 JSON:
 
 https://leovoel.github.io/embed-visualizer/
