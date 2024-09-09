@@ -3,6 +3,7 @@ import copy
 
 import tcod
 
+import color
 from engine import Engine
 import entity_factories
 from procgen import generate_derelict
@@ -13,7 +14,7 @@ def main() -> None:
     screen_height = 50
 
     map_width = 80
-    map_height = 45
+    map_height = 43
 
     room_max_size = 10
     room_min_size = 6
@@ -39,6 +40,10 @@ def main() -> None:
         engine=engine,
     )
     engine.update_fov()
+
+    engine.message_log.add_message(
+        "Neural link established. Shell access gained.", color.welcome_text
+    )
 
     with tcod.context.new_terminal(
         screen_width,
