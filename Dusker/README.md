@@ -1,4 +1,4 @@
-Dusker single input engine-roguelike prototype- i0004
+Dusker single input engine-roguelike prototype- i0005
 
 
 by Aspore "https://github.com/Asporez"
@@ -11,7 +11,7 @@ based upon Yet Another Roguelike Tutorial by TStand90 "https://github.com/TStand
 
 -2 NPC types.
 
--Basic interface.
+-Basic interface: HP, events, hover with mouse for info.
 
 -1 type of attack for each entities.
 
