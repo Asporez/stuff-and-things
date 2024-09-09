@@ -9,12 +9,6 @@ Grey_Hack: Useful GreyScript source codes.
 
 References: Self-explanatory.
 
-JSON:
-
-https://leovoel.github.io/embed-visualizer/
-
-https://discordjs.guide/popular-topics/embeds.html#embed-preview
-
 Python doc:
 
 https://numpy.org/doc/stable/user/absolute_beginners.html
