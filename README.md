@@ -9,7 +9,9 @@ Grey_Hack: Useful GreyScript source codes.
 
 References: Self-explanatory.
 
-SpaceBalls: Simple Asteroids clone.
+SpaceBalls: Generic Asteroids clone.
+
+SporeSweeper: Generic Minesweeper clone.
 
 Python doc:
 
